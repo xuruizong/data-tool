@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, MetaData,Table
 
 class DbClient:
-    def __init__(self,url,pool_timeout) -> None:
+    def __init__(self,url,pool_timeout=10) -> None:
         self.engine=create_engine(url=url,pool_timeout=pool_timeout)
         self.metadata = MetaData()
 
