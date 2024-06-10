@@ -11,8 +11,8 @@ setuptools.setup(
     packages=setuptools.find_namespace_packages(where="./src"),
     install_requires=[
         "pymysql==1.1.1",
-        "SQLAlchemy>=1.4.52",
-        "pydoris>=1.0.5.3",
+        "SQLAlchemy>=2.0.30",
+        "sqlalchemy-doris[pymysql]>=0.2.2",
         "click>=8.1.7"
     ],
     entry_points={

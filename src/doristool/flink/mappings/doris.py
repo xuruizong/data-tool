@@ -10,17 +10,16 @@ from sqlalchemy.sql.sqltypes import DATE
 from sqlalchemy.sql.sqltypes import INT
 from sqlalchemy.sql.sqltypes import SMALLINT
 from sqlalchemy.sql.sqltypes import BIGINT
-from pydoris.sqlalchemy.datatype import TINYINT
-from pydoris.sqlalchemy.datatype import LARGEINT
+from sqlalchemy_doris.datatype import TINYINT
+from sqlalchemy_doris.datatype import LARGEINT
 
-from pydoris.sqlalchemy.datatype import DOUBLE
+from sqlalchemy_doris.datatype import DOUBLE
 from sqlalchemy.sql.sqltypes  import DECIMAL
 from sqlalchemy.sql.sqltypes import FLOAT
 
 from sqlalchemy.sql.sqltypes import JSON
 
 from sqlalchemy import Table
-
 
 DORIS_TYPE_MAPPING = {
     BOOLEAN: lambda x: "BOOLEAN",
