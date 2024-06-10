@@ -1,3 +1,4 @@
+from sqlalchemy import create_engine, MetaData,Table
 from sqlalchemy.sql.sqltypes import BOOLEAN
 
 from sqlalchemy.dialects.mysql.types import INTEGER
@@ -66,3 +67,12 @@ MYSQL_TYPE_MAPPING = {
     VARBINARY: lambda x: "BYTES",
     BLOB: lambda x: "BYTES"
 }
+
+WITH_SEGMENT = """'connector' = 'jdbc',
+  'url' = 'jdbc:mysql://localhost:3306/mydatabase',
+  'table-name' = '{table_name}',
+  'username' = '',
+  'password'=''"""
+
+def build_with_segment(table: Table)->str:
+    return WITH_SEGMENT.format(table_name=table.name)
