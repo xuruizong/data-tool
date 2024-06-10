@@ -1,0 +1,8 @@
+.env
+.vscode
+dist/
+out/
+build/
+conf/
+*.egg-info/
+*.egg

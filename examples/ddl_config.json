@@ -1,0 +1,15 @@
+{
+    "source": {
+        "url": "mysql+pymysql://**:**@127.0.0.1:3306/test",
+        "table_names":["user_info","mssq_item_version"],
+        "pool_timeout": 1000
+    },
+    "sink": {
+        "out_file":"/user/workspace/doris-tools/out/ddl.sql",
+        "prefix":"ods_tymh_sys_",
+        "add_columns":[
+            " `_delete_flag` INT NULL DEFAULT \"0\"",
+            "`_update_time` DATETIME NULL DEFAULT CURRENT_TIMESTAMP"
+        ]
+    }
+}

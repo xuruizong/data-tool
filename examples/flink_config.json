@@ -1,0 +1,15 @@
+{
+    "source":{
+        "url":"",
+        "pool_timeout": 1000,
+        "table_names":[]
+    },
+    "sink": {
+        "url":"",
+        "pool_timeout": 1000,
+        "table_names":[]
+    },
+    "out": {
+        "out_path":"/home/wangzhen/workspace/doris-tools/out/flink"
+    }
+}
