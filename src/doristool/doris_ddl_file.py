@@ -57,7 +57,6 @@ def genrate_ddl_table(table_name, db_client:DbClient,sink_config:SinkConfig) -> 
 
     if sink_config.has_add_columns():
         ddl_segment=add_columns_ddl_segment(sink_config._add_columns)
-        print(ddl_segment)
         return doris_ddl.to_ddl(column_blcok_deal=lambda x: x+ddl_segment)
     else:
         return doris_ddl.to_ddl()

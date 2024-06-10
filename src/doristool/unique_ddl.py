@@ -24,7 +24,7 @@ class UniqueDDL(DorisDDL):
             self.columns.append(column)
         
     # 生成DDL
-    def to_ddl(self,column_blcok_deal)->str:
+    def to_ddl(self,column_blcok_deal=None)->str:
         # 列模块
         column_block = super().build_column_block(self.columns)
         if column_blcok_deal is not None:

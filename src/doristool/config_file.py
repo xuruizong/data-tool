@@ -17,7 +17,11 @@ def parse_source_config(json_obj) -> SourceConfig:
     return source_config
 
 def parse_sink_config(json_obj) -> SinkConfig:
-    sink_config=SinkConfig(json_obj['out_file']
+
+    if 'add_columns' not in json_obj:
+        return SinkConfig(json_obj['out_file']
+                           ,json_obj['prefix'])
+    else:
+        return SinkConfig(json_obj['out_file']
                            ,json_obj['prefix']
                            ,json_obj['add_columns'])
-    return sink_config

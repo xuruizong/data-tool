@@ -1,5 +1,5 @@
 class SinkConfig:
-    def __init__(self,out_path,prefix,add_columns) -> None:
+    def __init__(self,out_path,prefix,add_columns=None) -> None:
         self._out_path=out_path
         self._prefix=prefix
         self._add_columns=add_columns
