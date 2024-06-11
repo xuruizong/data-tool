@@ -2,8 +2,8 @@
 
 #### 介绍
 data-tool是一个数据开发中常用的一些工具集，主要功能如下：
-1.生成mysql到doris表迁移脚本
-2.flinksql 作业脚本生成
+1. 生成mysql到doris表迁移脚本
+2. flinksql 作业脚本生成
 
 #### 安装教程
 
