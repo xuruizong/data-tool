@@ -50,7 +50,7 @@ WITH_SEGMENT = """'connector' = 'doris',
   'username' = '',
   'password' = '',
   'table.identifier' = '{table_full_name}',
-  'sink.label-prefix' = '{label}', """
+  'sink.label-prefix' = '{label}' """
 
 def build_with_segment(table: Table)->str:
     return WITH_SEGMENT.format(table_full_name=table.fullname,

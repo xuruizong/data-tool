@@ -15,11 +15,11 @@ FLINK_SQL_TEMPLATE = """
 
 # ceate table 语句模板
 TABLE_CREATE_DDL_TEMPLATE = """
-CREATE TABLE IF NOT EXISTS `{table_name} `
-{{
+CREATE TABLE IF NOT EXISTS `{table_name}`
+(
   {column_segement}
   {primay_segement}
-}}
+)
 WITH (
   {with_segment}
 );
@@ -50,12 +50,12 @@ def generate_sql(source_db_type:str,source_table: Table,
     return FLINK_SQL_TEMPLATE.format(source_table_ddl=source_table_ddl
                                      ,sink_table_ddl=sink_table_ddl,
                                      insert_dml=insert_dml)
-
+# 构建字段sql片段
 def build_coumn_segement(db_type,columns)->str:
-    
     segement = "" 
-
     for column in columns:
+        if column.name == '_delete_flag' or column.name == '_update_time':
+            continue
         column_mapping = get_type_mapping(db_type,column.type)
         segement +="  "
         segement += COLUMN_DDL_TEMPLATE.format(name=column.name,column_type = column_mapping(column.type))
