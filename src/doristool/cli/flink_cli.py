@@ -2,7 +2,7 @@ import click
 import os
 
 from doristool.flink.config_file import parse
-from doristool.db_client import DbClient
+from doristool.common.db_client import DbClient
 from doristool.flink.flink_sql import generate_sql,generate_table_ddl
 from doristool.flink.config_file import DbConfig,OutConfig
 
