@@ -1,5 +1,5 @@
 import click
-from doristool.doris_ddl_file import generate_ddl_file
+from doristool.doris.doris_ddl_file import generate_ddl_file
 
 @click.command(name="ddl",help="批量mysql转doris建表脚本")
 @click.option('--config',required=True, help='配置文件路径')

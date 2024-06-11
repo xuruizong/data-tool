@@ -1,10 +1,10 @@
-from doristool.config_file import parse_json
-from doristool.config_file import parse_sink_config
-from doristool.config_file import parse_source_config
+from doristool.doris.config_file import parse_json
+from doristool.doris.config_file import parse_sink_config
+from doristool.doris.config_file import parse_source_config
 from doristool.db_client import DbClient
-from doristool.unique_ddl import UniqueDDL
-from doristool.duplicate_dll import Duplicate
-from doristool.sink_config import SinkConfig
+from doristool.doris.unique_ddl import UniqueDDL
+from doristool.doris.duplicate_dll import Duplicate
+from doristool.doris.sink_config import SinkConfig
 
 def generate_ddl_file(config_file) -> None:
     json_obj = parse_json(config_file)

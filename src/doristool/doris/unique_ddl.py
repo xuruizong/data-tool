@@ -1,6 +1,6 @@
-from doristool.doris_ddl import DorisDDL
+from doristool.doris.doris_ddl import DorisDDL
 from sqlalchemy.sql.schema import Column
-from doristool.doris_ddl import comment_escape
+from doristool.doris.doris_ddl import comment_escape
 
 class UniqueDDL(DorisDDL):
     def __init__(self,table_name,primary_keys: list,table_comment) -> None:

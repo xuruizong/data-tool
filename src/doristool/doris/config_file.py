@@ -1,5 +1,5 @@
-from doristool.source_config import SourceConfig
-from doristool.sink_config import SinkConfig
+from doristool.doris.source_config import SourceConfig
+from doristool.doris.sink_config import SinkConfig
 import json
 
 def parse_json(file_path) -> json:
