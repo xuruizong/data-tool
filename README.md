@@ -13,12 +13,12 @@ data-tool是一个数据开发中常用的一些工具集，主要功能如下�
 
 #### 使用说明
 1. 生成mysql到doris表结构迁移脚本批量生成
-生成命令
+1.1 生成命令
 
 ```bash
     doristool ddl --config=配置文件完整路径
 ```
-配置文件样例
+1.2 配置文件样例
 ```json
 {
     "source": {
@@ -36,6 +36,8 @@ data-tool是一个数据开发中常用的一些工具集，主要功能如下�
     }
 }
 ```
+1.3 配置说明
+
 
 ``` bash
     doristool fddl --dbtype=MYSQL --host=*** --port=3306 --username=root --password=*** --database=test --table=mssq_item_version
