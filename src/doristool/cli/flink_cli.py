@@ -6,7 +6,7 @@ from doristool.db_client import DbClient
 from doristool.flink.flink_sql import generate_sql,generate_table_ddl
 from doristool.flink.config_file import DbConfig,OutConfig
 
-@click.command(name="fddl")
+@click.command(name="fddl", help="生成单表flink DDL")
 @click.option('--dbtype',required=True, help='数据库类型 支持MYSQL DORIS')
 @click.option('--host',required=True, help='ip 地址')
 @click.option('--port',required=True, help='端口')
@@ -19,8 +19,8 @@ def fddl(dbtype,host,port,username,password,database,table)->None:
     print(generate_table_ddl(dbtype,db_client.get_table(table)))
 
 
-@click.command(name="flink")
-@click.option('--config',required=True, help='source config file path')
+@click.command(name="flink", help="flink作业脚本生成")
+@click.option('--config',required=True, help='配置文件路径')
 def flink(config)->None:
     # 解析出配置
     user_config = parse(config)

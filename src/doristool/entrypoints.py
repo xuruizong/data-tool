@@ -10,7 +10,9 @@ from doristool.cli.flink_cli import flink
 @click.version_option(
     version=doristool_package.nice_version_name(),
     prog_name=doristool_package.__package_name__,
+    help = "查看版本号"
 )
+@click.help_option(help="查看帮助信息")
 def doristool()-> None:
     pass
 
