@@ -13,7 +13,9 @@ setuptools.setup(
         "pymysql==1.1.1",
         "SQLAlchemy>=2.0.30",
         "sqlalchemy-doris[pymysql]>=0.2.2",
-        "click>=8.1.7"
+        "click>=8.1.7",
+        "chinesecalendar>=1.9.1",
+        "lunarcalendar>=0.0.9"
     ],
     entry_points={
         "console_scripts": ["doristool = doristool.entrypoints:main"],

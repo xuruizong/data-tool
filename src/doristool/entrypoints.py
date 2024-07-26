@@ -3,6 +3,7 @@ import doristool as doristool_package
 from doristool.cli.ddl_cli import ddl
 from doristool.cli.flink_cli import fddl
 from doristool.cli.flink_cli import flink
+from doristool.cli.date_cli import generate
 
 
 
@@ -20,6 +21,7 @@ def doristool()-> None:
 doristool.add_command(fddl)
 doristool.add_command(ddl)
 doristool.add_command(flink)
+doristool.add_command(generate)
 
 
 def main(**kwargs):
